@@ -25,9 +25,10 @@ public class S2_2
 		
 
 		System.out.println("이름 : " + name);
-		System.out.println(Phone_Number);
-		System.out.println(Social_Security_Number);
+		System.out.println("전화번호 : " + Phone_Number);
+		System.out.println("주민등록번호 : " + Social_Security_Number);
 		
 		s.close();
+		
 	}
 }
