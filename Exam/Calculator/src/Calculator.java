@@ -74,14 +74,14 @@ public class Calculator
 				System.out.println("원의 반지름을 입력하세요");
 				m_fRadius = scan.nextFloat();
 			
-				System.out.println("결과값 : " + CalRadian(m_fRadius));
+				System.out.println("결과값 : " + CalArea(m_fRadius));
 			
 				break;
 			case 7:
 				System.out.println("원의 반지름을 입력하세요");
 				m_fRadius = scan.nextFloat();
 			
-				System.out.println("결과값 : " + CalRound(m_fRadius));
+				System.out.println("결과값 : " + CalRadian(m_fRadius));
 			
 				break;
 
@@ -117,12 +117,12 @@ public class Calculator
 		return primary % secondary;
 	}
 	
-	static double CalRadian(float Radius)
+	static double CalArea(float Radius)
 	{
 		return Radius * Radius * Math.PI;
 	}
 	
-	static double CalRound(float Radius)
+	static double CalRadian(float Radius)
 	{
 		return Radius * 2 * Math.PI;
 	}
