@@ -13,7 +13,7 @@ public class Operator
 		if(i < 0)
 			return;
 		System.out.println("이건 재귀함수야");
-		System.out.println(i + "번째 반복횟수가 남았지");
+		System.out.println(i + "번 반복횟수가 남았지");
 		recursion(i-1);
 		
 	}
