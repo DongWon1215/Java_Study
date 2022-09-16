@@ -9,7 +9,7 @@ public class GradeCalculator
 		Scanner sc = new Scanner(System.in);
 		
 		int iScore = sc.nextInt();
-		String strGrade = "";
+		String strGrade = "F";
 		
 		
 		
@@ -50,8 +50,6 @@ public class GradeCalculator
 			else
 				strGrade = "C-";
 		}
-		else
-			strGrade = "F";
 		
 		System.out.println(strGrade);
 		
