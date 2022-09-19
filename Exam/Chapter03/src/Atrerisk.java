@@ -54,9 +54,6 @@ public class Atrerisk {
 				
 				System.out.println();
 			}
-			/*
-			 * int i = 0; if( i !=-1) System.out.println("이건 되는구나");
-			 */
 	}
 
 }
