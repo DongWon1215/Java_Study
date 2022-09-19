@@ -11,12 +11,6 @@ public class MemberInstanceMain
 		mi.Introduce();
 		System.out.println();
 		mi2.Introduce();
-		
-		mi2 = mi;
-		
-		System.out.println(mi.toString());
-		System.out.println(mi2.toString());
-		System.out.println(mi.equals(mi2));
 	}
 
 }
