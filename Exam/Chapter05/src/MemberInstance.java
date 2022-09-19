@@ -9,14 +9,6 @@ public class MemberInstance
 	private String strBirthDay;
 	private int iGrade;
 	
-	MemberInstance(String name, String phonenum, String major, String email, int grade) 
-	{
-		strName = name;
-		strPhoneNumber = phonenum;
-		strMajor = major;
-		strEmail = email;
-		iGrade = grade;
-	}
 
 	MemberInstance(String name, String phonenum, String major, String email, String address, String birthday, int grade) 
 	{
@@ -27,6 +19,11 @@ public class MemberInstance
 		strAddress = address;
 		strBirthDay = birthday;
 		iGrade = grade;
+	}
+	
+	MemberInstance(String name, String phonenum, String major, String email, int grade) 
+	{
+		this(name, phonenum, major, email, null, null, grade);
 	}
 	
 	void Introduce() 

@@ -12,5 +12,5 @@ public class MemberInstanceMain
 		System.out.println();
 		mi2.Introduce();
 	}
-
+	
 }
