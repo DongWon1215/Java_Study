@@ -26,7 +26,7 @@ public class MemberInstance
 		this(name, phonenum, major, email, null, null, grade);
 	}
 	
-	void Introduce() 
+	void introduce() 
 	{
 		System.out.println("제 이름은 " + strName + " 입니다");
 		System.out.println("제 전화번호는 " + strPhoneNumber + " 입니다");
