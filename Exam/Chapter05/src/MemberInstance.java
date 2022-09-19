@@ -18,7 +18,6 @@ public class MemberInstance
 		iGrade = grade;
 	}
 
-
 	MemberInstance(String name, String phonenum, String major, String email, String address, String birthday, int grade) 
 	{
 		strName = name;
@@ -43,6 +42,5 @@ public class MemberInstance
 			System.out.println("제 집 주소는 " + strAddress + " 입니다");
 			System.out.println("제 생일은 " + strBirthDay + " 입니다");
 		}
-		
 	}
 }
