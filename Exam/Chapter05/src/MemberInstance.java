@@ -32,24 +32,17 @@ public class MemberInstance
 	
 	void Introduce() 
 	{
+		System.out.println("제 이름은 " + strName + " 입니다");
+		System.out.println("제 전화번호는 " + strPhoneNumber + " 입니다");
+		System.out.println("제 전공은 " + strMajor + " 입니다");
+		System.out.println("제 학년은 " + iGrade + " 입니다");
+		System.out.println("제 이메일 주소는 " + strEmail + " 입니다");
+		
 		if (strBirthDay != null && strAddress != null) 
 		{
-			System.out.println("제 이름은 " + strName + " 입니다");
-			System.out.println("제 전화번호는 " + strPhoneNumber + " 입니다");
-			System.out.println("제 전공은 " + strMajor + " 입니다");
-			System.out.println("제 학년은 " + iGrade + " 입니다");
-			System.out.println("제 이메일 주소는 " + strEmail + " 입니다");
 			System.out.println("제 집 주소는 " + strAddress + " 입니다");
 			System.out.println("제 생일은 " + strBirthDay + " 입니다");
 		}
 		
-		else
-		{
-			System.out.println("제 이름은 " + strName + " 입니다");
-			System.out.println("제 전화번호는 " + strPhoneNumber + " 입니다");
-			System.out.println("제 전공은 " + strMajor + " 입니다");
-			System.out.println("제 학년은 " + iGrade + " 입니다");
-			System.out.println("제 이메일 주소는 " + strEmail + " 입니다");
-		}
 	}
 }
