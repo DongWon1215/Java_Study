@@ -31,7 +31,8 @@ public class Main
 		ui.ShowInfo();
 		sc.close();
 		
-		Contact[] user = new Contact[10];
+		SmartPhone phone = new SmartPhone();
+		
 		
 		
 		

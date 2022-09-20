@@ -9,56 +9,56 @@ public class Contact
 	private String group;
 	
 	//===================Setter==============
-	void setName(String name)
+	public void setName(String name)
 	{
 		this.name = name;
 	}
-	void setPhoneNumber(String phoneNumber)
+	public void setPhoneNumber(String phoneNumber)
 	{
 		this.phoneNumber = phoneNumber;
 	}
-	void setEMail(String eMail)
+	public void setEMail(String eMail)
 	{
 		this.eMail = eMail;
 	}
-	void setAddress(String address)
+	public void setAddress(String address)
 	{
 		this.address = address;
 	}
-	void setBirth(String birthDay)
+	public void setBirth(String birthDay)
 	{
 		this.birthDay = birthDay;
 	}
 	
-	void setGroup(String group)
+	public void setGroup(String group)
 	{
 		this.group = group;
 	}
 	
 	//==================getter===============
 	
-	String getName()
+	public String getName()
 	{
 		return this.name;
 	}
-	String getPhoneNumber()
+	public String getPhoneNumber()
 	{
 		return this.phoneNumber;
 	}
-	String getEMail()
+	public String getEMail()
 	{
 		return this.eMail;
 	}
-	String getAddress()
+	public String getAddress()
 	{
 		return this.address;
 	}
-	String getBirth()
+	public String getBirth()
 	{
 		return this.birthDay;
 	}
 	
-	String getGroup()
+	public String getGroup()
 	{
 		return this.group;
 	}
