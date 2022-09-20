@@ -62,4 +62,16 @@ public class UserInfo
 	{
 		return this.group;
 	}
+	
+	//==================ETC function===============
+	
+	void ShowInfo()
+	{
+		System.out.println("이름 : " + name);
+		System.out.println("전화번호 : " + phoneNumber);
+		System.out.println("이메일 : " + eMail) ;
+		System.out.println("주소 : " + address);
+		System.out.println("생일 : " + birthDay);
+		System.out.println("그룹 : " + group);
+	}
 }
