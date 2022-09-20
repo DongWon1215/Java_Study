@@ -1,5 +1,5 @@
 
-public class UserInfo 
+public class Contact 
 {
 	private String name;
 	private String phoneNumber;

@@ -6,7 +6,7 @@ public class Main
 	{
 		// TODO Auto-generated method stub
 		
-		UserInfo ui = new UserInfo();
+		Contact ui = new Contact();
 		
 		ui.ShowInfo();
 		Scanner sc = new Scanner(System.in);
@@ -31,7 +31,7 @@ public class Main
 		ui.ShowInfo();
 		sc.close();
 		
-		UserInfo[] user = new UserInfo[10];
+		Contact[] user = new Contact[10];
 		
 		
 		
