@@ -9,7 +9,6 @@ public class MemberInstance
 	private String strBirthDay;
 	private int iGrade;
 	
-
 	MemberInstance(String name, String phonenum, String major, String email, String address, String birthday, int grade) 
 	{
 		strName = name;
