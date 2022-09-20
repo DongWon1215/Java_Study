@@ -1,37 +1,22 @@
 import java.util.Scanner;
 public class SmartPhone {
 
+	
+	private int personCount;
 	private Contact user[] = new Contact[10];
-	
 	private Scanner sc = new Scanner(System.in);
-	
-	private void printPersonInfo(int index)
-	{
-		System.out.println("user name :" + user[index].getName() + "user phoneNumber :" + user[index].getPhoneNumber() + "user eMail :" + user[index].getEMail()
-				+ "user address :" + user[index].getAddress() + "user birthDay :" + user[index].getBirth() + "user group :" + user[index].getGroup());
-	}
-	
-	private void setPersonInfo(int index, String name)
-	{
-		user[index].setName(name);
-	}
 	
 	private boolean matchPerson(int index) 
 	{
-		printPersonInfo(index);
-		System.out.println("정보를 수정할 사람이 맞습니까?");
+		user[index].ShowInfo();
+		System.out.println("선택한 사람의 정보가 맞습니까?");
 		System.out.println("Yes or No");
 		
-		switch(sc.next())
-		{
-			case "Yes":
-				return true;
-				
-			default:
-				return false;
-		}
+		if(sc.next() == "Yes")
+			return true;
+		
+		return false;
 	}
-	
 	
 	private static SmartPhone addressBook = new SmartPhone();
 	
@@ -48,7 +33,7 @@ public class SmartPhone {
 		{
 			if(user[i].getName() == name)
 			{
-				printPersonInfo(i);
+				user[i].ShowInfo();
 			}
 		}
 	}
@@ -57,14 +42,15 @@ public class SmartPhone {
 	{
 		for(int i = 0; i < user.length; i++)
 			{
-				printPersonInfo(i);
+				user[i].ShowInfo();
 				System.out.println("====================================================================");
 			}
 	}
 	
-	public void addPerson()
+	public void addPerson(int index, Contact ct)
 	{
-		
+		user[index] = ct;
+		personCount++;
 	}
 	
 	public void deletePerson(int index)
@@ -72,6 +58,7 @@ public class SmartPhone {
 		if(matchPerson(index))
 		{
 			user[index] = null;
+			personCount--;
 		}
 	}
 	
@@ -79,7 +66,14 @@ public class SmartPhone {
 	{
 		if(matchPerson(index))
 		{
+			System.out.println("변경할 이름, 전화번호, 이메일, 주소, 생일, 그룹명을 순서대로 작성하세요");
 			
+			user[index].setName(sc.next());
+			user[index].setPhoneNumber(sc.next());
+			user[index].setEMail(sc.next());
+			user[index].setAddress(sc.next());
+			user[index].setBirth(sc.next());
+			user[index].setGroup(sc.next());
 		}
 	}
 }
