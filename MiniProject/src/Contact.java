@@ -8,6 +8,21 @@ public class Contact
 	private String birthDay;
 	private String group;
 	
+	Contact()
+	{
+		
+	}
+	
+	Contact(String name, String phoneNumber, String eMail,String address,String birthDay,String group)
+	{
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.eMail = eMail;
+		this.address = address;
+		this.birthDay = birthDay;
+		this.group = group;		
+	}
+	
 	//===================Setter==============
 	public void setName(String name)
 	{
