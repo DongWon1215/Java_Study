@@ -52,6 +52,7 @@ class SmartPhone {
 					user[i].ShowInfo();
 					return true;
 				}
+				System.out.println("검색 대상이 없습니다");
 			}
 		}
 		return false;
@@ -68,6 +69,9 @@ class SmartPhone {
 				if(i == personCount - 1)
 				return true;
 			}
+		
+		System.out.println("검색 대상이 없습니다");
+		
 		return false;
 	}
 	
