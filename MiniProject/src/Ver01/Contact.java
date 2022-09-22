@@ -1,3 +1,4 @@
+package Ver01;
 
 public class Contact 
 {
