@@ -2,12 +2,12 @@ package Ver03;
 
 public class Contact 
 {
-	private String name;
-	private String phoneNumber;
-	private String eMail;
-	private String address;
-	private String birthDay;
-	private String group;
+	protected String name;
+	protected String phoneNumber;
+	protected String eMail;
+	protected String address;
+	protected String birthDay;
+	protected String group;
 	
 	Contact()
 	{
@@ -25,6 +25,7 @@ public class Contact
 	}
 	
 	//===================Setter==============
+	
 	public void setName(String name)
 	{
 		this.name = name;

@@ -7,10 +7,9 @@ class Main
 	{
 		// TODO Auto-generated method stub
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);		// phone.GetScanner()으로 대체가능
 
 		SmartPhone phone = SmartPhone.getInstance();
-		
 		
 		while(true)
 		{
@@ -62,6 +61,5 @@ class Main
 						System.out.println("잘못된 값을 입력하였습니다");					
 			}
 		}
-		//sc.close();
 	}
 }
