@@ -1,11 +1,11 @@
-package Ver02;
+package Ver03;
 import java.util.Scanner;
 
-class SmartPhone {
+public class SmartPhone {
 	
-	private int personCount;									// 배열에 들어가있는 실질적 갯수를 저장할 변수
-	private static final int MAX_PERSON_NUM = 10;				// 나중에 최대 갯수가 변경될 경우 수정이 간단하도록 최대값을 정의함
-	private Scanner sc = new Scanner(System.in);				// 확인 여부 확인용 스캐너
+	private int personCount;
+	private static final int MAX_PERSON_NUM = 10;
+	private Scanner sc = new Scanner(System.in);
 	private Contact user[] = new Contact[MAX_PERSON_NUM];
 
 	private boolean isInNumRange(int index) 
@@ -16,7 +16,7 @@ class SmartPhone {
 		return false;
 	}
 	
-	private boolean isThisPerson(int index) 						//선택한 사람이 맞는지 
+	private boolean matchPerson(int index) 
 	{
 		user[index].ShowInfo();
 		System.out.println("선택한 사람의 정보가 맞습니까?");
@@ -37,7 +37,7 @@ class SmartPhone {
 			return addressBook;
 	}
 	
-	public boolean searchPerson(String name)					// 입력한 이름과 동일한 이름을 가진 객체가 있는지 확인하는 함수
+	public boolean searchPerson(String name)
 	{
 		if(personCount == 0)
 			System.out.println("검색 할 데이터가 없습니다");
@@ -92,7 +92,7 @@ class SmartPhone {
 			
 		else
 		{
-			if(isThisPerson(index) && isInNumRange(index))
+			if(matchPerson(index) && isInNumRange(index))
 			{
 				for(int i = index; i < personCount - 1; i++)
 				user[i] = user[i + 1];
@@ -115,7 +115,7 @@ class SmartPhone {
 		
 		else 
 		{
-			if(isThisPerson(index))
+			if(matchPerson(index))
 			{
 				user[index].setName(name);
 				user[index].setPhoneNumber(phoneNumber);

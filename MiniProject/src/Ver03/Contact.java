@@ -1,6 +1,6 @@
-package Ver02;
+package Ver03;
 
-class Contact 
+public class Contact 
 {
 	private String name;
 	private String phoneNumber;
