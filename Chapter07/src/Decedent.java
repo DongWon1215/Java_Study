@@ -1,4 +1,5 @@
 
-public class Decedent {
-
+public class Decedent extends Inheritance {
+	
+	
 }

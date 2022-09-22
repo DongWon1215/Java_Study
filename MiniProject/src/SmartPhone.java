@@ -47,6 +47,7 @@ public class SmartPhone {
 			{
 				if(user[i].getName().equalsIgnoreCase(name))
 				{
+					System.out.println(" Index = " + (i + 1));
 					user[i].ShowInfo();
 					return true;
 				}
@@ -59,6 +60,7 @@ public class SmartPhone {
 	{
 		for(int i = 0; i < personCount; i++)
 			{
+			System.out.println(" Index = " + (i + 1));
 				user[i].ShowInfo();
 				System.out.println("====================================================================");
 				
@@ -91,7 +93,7 @@ public class SmartPhone {
 		{
 			if(matchPerson(index) && isInNumRange(index))
 			{
-				for(int i = index; i < personCount; i++)
+				for(int i = index; i < personCount - 1; i++)
 				user[i] = user[i + 1];
 				user[personCount] = null;
 				personCount--;
