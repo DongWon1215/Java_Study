@@ -7,22 +7,10 @@ class Main
 	{
 		// TODO Auto-generated method stub
 		
-		//Contact ui = new Contact();
-		
-//		ui.ShowInfo();
 		Scanner sc = new Scanner(System.in);
 
 		SmartPhone phone = SmartPhone.getInstance();
 		
-		/////////////////////////////////////////////////////////////
-//		System.out.println("이름 : "+ ui.getName());
-//		System.out.println("전화번호 : "+ ui.getPhoneNumber());
-//		System.out.println("이메일 : "+ ui.getEMail());
-//		System.out.println("주소 : "+ ui.getAddress());
-//		System.out.println("생일 : "+ ui.getBirth());
-//		System.out.println("그룹 : "+ ui.getGroup());
-		
-		//////////////////////////////////////////////////////////
 		
 		while(true)
 		{
@@ -73,10 +61,6 @@ class Main
 					default:
 						System.out.println("잘못된 값을 입력하였습니다");					
 			}
-
-			//ui.ShowInfo();
-		
-		//phone.addPerson(ui);
 		}
 		//sc.close();
 	}
