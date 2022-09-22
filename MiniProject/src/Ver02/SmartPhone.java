@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 class SmartPhone {
 	
-	private int personCount;									// 배열에 들어가있는 실질적 갯수를 저장할 변수
-	private static final int MAX_PERSON_NUM = 10;				// 나중에 최대 갯수가 변경될 경우 수정이 간단하도록 최대값을 정의함
-	private Scanner sc = new Scanner(System.in);				// 확인 여부 확인용 스캐너
+	private int personCount;
+	private static final int MAX_PERSON_NUM = 10;
+	private Scanner sc = new Scanner(System.in);
 	private Contact user[] = new Contact[MAX_PERSON_NUM];
 
-	private boolean isInNumRange(int index) 					// 저장된 데이터 갯수보다 더 높은 숫자를 입력했는지 확인
+	private boolean isInNumRange(int index)
 	{
 		if(index < personCount)
 			return true;
@@ -16,7 +16,7 @@ class SmartPhone {
 		return false;
 	}
 	
-	private boolean isThisPerson(int index) 					// 선택한 사람이 맞는지 확인
+	private boolean isThisPerson(int index)
 	{
 		user[index].ShowInfo();
 		System.out.println("선택한 사람의 정보가 맞습니까?");
@@ -37,7 +37,7 @@ class SmartPhone {
 			return addressBook;
 	}
 	
-	public boolean searchPerson(String name)					// 입력한 이름과 동일한 이름을 가진 객체가 있는지 확인
+	public boolean searchPerson(String name)
 	{
 		if(personCount == 0)
 			System.out.println("검색 할 데이터가 없습니다");
@@ -57,7 +57,7 @@ class SmartPhone {
 		return false;
 	}
 	
-	public boolean searchPeople()								// 저장된 모든 객체 출력
+	public boolean searchPeople()
 	{
 		for(int i = 0; i < personCount; i++)
 			{
@@ -71,7 +71,7 @@ class SmartPhone {
 		return false;
 	}
 	
-	public boolean addPerson(Contact ct)						// 객체를 배열에 추가
+	public boolean addPerson(Contact ct)
 	{
 		if(personCount >= MAX_PERSON_NUM)
 			System.out.println("최대 인원 수에 도달하였습니다");
@@ -85,7 +85,7 @@ class SmartPhone {
 		return false;
 	}
 	
-	public boolean deletePerson(int index)						// 배열에 저장된 객체 검색 후 삭제
+	public boolean deletePerson(int index)
 	{
 		if(personCount == 0)
 			System.out.println("지울 수 있는 데이터가 없습니다");
@@ -107,7 +107,7 @@ class SmartPhone {
 		return false;
 	}
 	
-	public boolean editPerson(int index, String name, String phoneNumber, String eMail, String address, String birth, String group)		//배열에 저장된 객체의 정보를 수정
+	public boolean editPerson(int index, String name, String phoneNumber, String eMail, String address, String birth, String group)
 	{
 
 		if(personCount == 0)
