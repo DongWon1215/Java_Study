@@ -1,19 +1,28 @@
 
-public class Material extends Object{
+public class Material{
+
+	String material;
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 
 	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
+	public int hashCode() 
+	{
 		return super.hashCode();
 	}
 
 	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
+	public String toString() 
+	{
 		return "null";
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		Material mt = new Material();
 		
