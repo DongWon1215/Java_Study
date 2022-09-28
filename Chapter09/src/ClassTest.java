@@ -6,7 +6,7 @@ public class ClassTest
 	public static void main(String[] args) throws ClassNotFoundException
 	{
 		Class userClass = Class.forName("Chapter09.User");
-		
+				
 		System.out.println("=====================================================================");
 		Field[] fieldList =  userClass.getFields();
 		
