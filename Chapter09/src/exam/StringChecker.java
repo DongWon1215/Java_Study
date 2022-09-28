@@ -7,6 +7,8 @@ public class StringChecker {
 		if(name.length() != name.trim().length())
 			return false;
 		
+		
+		
 		return true;
 	}
 }
