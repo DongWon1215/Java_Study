@@ -6,8 +6,8 @@ public class StringChecker {
 	{
 		if(name.indexOf(" ") != -1)
 			return false;
-			
-		if(name.replaceAll("[^a-z°¡-ÆR]*$", "").length() != name.length())
+		
+		if(name.replaceAll("[^a-z°¡-ÆR]*", "").length() != name.length())
 			return false;
 		
 		return true;
