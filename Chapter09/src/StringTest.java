@@ -16,7 +16,7 @@ public class StringTest
 		System.out.println(str4);
 		System.out.println(str5);
 		
-		System.out.println(str1.concat());
+		System.out.println(str1.concat(""));
 		
 		System.out.println(str1.startsWith("d"));
 		
