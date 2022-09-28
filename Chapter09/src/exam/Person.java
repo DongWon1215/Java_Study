@@ -4,6 +4,12 @@ public class Person {
 	String name;
 	String personNumber;
 	
+	Person(String name, String personNumber)
+	{
+		this.name = name;
+		this.personNumber = personNumber;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
