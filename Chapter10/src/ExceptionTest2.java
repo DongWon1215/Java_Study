@@ -13,7 +13,7 @@ public class ExceptionTest2 {
 			
 			try
 			{
-				if(!(score >= && score <= 100))
+				if(!(score >= 0 && score <= 100))
 				{
 					throw new Exception("잘못된 값 입력");
 				}
