@@ -41,7 +41,7 @@ public class FootballPlayer
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		return ;
+		return (this.age + this.number) % 10;
 	}
 
 	@Override

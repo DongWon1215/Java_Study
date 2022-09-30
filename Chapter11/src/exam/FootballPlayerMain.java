@@ -24,7 +24,12 @@ public class FootballPlayerMain {
 		
 		System.out.println();
 		
-		Set<FootballPlayer> playerSet = new HashSet<FootballPlayer>() ;
+		Set<FootballPlayer> playerSet = new HashSet<FootballPlayer>();
+		playerSet.add(new FootballPlayer(1,2,"aaa","bbb"));
+		playerSet.add(new FootballPlayer(2,3,"aaa","bbb"));
+		playerSet.add(new FootballPlayer(3,4,"ccc","ccc"));
+		for(FootballPlayer player : playerSet)
+			player.toString();
 		
 		
 		TreeSet<FootballPlayer> playerTreeSet = new TreeSet<FootballPlayer>();
@@ -34,6 +39,8 @@ public class FootballPlayerMain {
 		playerTreeSet.add(new FootballPlayer(4,5,"ddd","ddd"));
 		playerTreeSet.add(new FootballPlayer(5,6,"eee","eee"));
 		playerTreeSet.add(new FootballPlayer(6,7,"fff","fff"));
+		for(FootballPlayer player : playerTreeSet)
+			player.toString();
 		
 		
 		
@@ -44,6 +51,8 @@ public class FootballPlayerMain {
 		playerMap.put(b.getNumber(), b);
 		FootballPlayer c = new FootballPlayer(1,1,"aaa","aaa");
 		playerMap.put(c.getNumber(), c);
+		System.out.println(playerMap.size());
+			playerMap.get(1).toString();
 	}
 
 }
