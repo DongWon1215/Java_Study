@@ -8,12 +8,7 @@ public class Contact implements ShowData
 	protected String address;
 	protected String birthDay;
 	protected String group;
-	
-	Contact()
-	{
 		
-	}
-	
 	Contact(String name, String phoneNumber, String eMail,String address,String birthDay,String group)
 	{
 		this.phoneNumber = phoneNumber;

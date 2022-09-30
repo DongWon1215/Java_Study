@@ -1,4 +1,6 @@
 package Ver07;
+import java.awt.List;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,7 +9,7 @@ public class SmartPhone {
 	private int personCount;
 	private static final int MAX_PERSON_NUM = 10;
 	private Scanner sc = new Scanner(System.in);
-	private Contact user[] = new Contact[MAX_PERSON_NUM];
+	private List<Contact> user = new ArrayList<Contact>();
 
 	private boolean isInNumRange(int index) 
 	{
@@ -19,7 +21,7 @@ public class SmartPhone {
 	
 	private boolean matchPerson(int index) 
 	{
-		user[index].ShowData();
+		user.ShowData();
 		System.out.println("선택한 사람의 정보가 맞습니까?");
 		System.out.println("Yes or No");
 		

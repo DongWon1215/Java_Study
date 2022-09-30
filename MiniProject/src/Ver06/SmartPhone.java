@@ -93,7 +93,7 @@ public class SmartPhone {
 			try
 			{
 
-				if(ct.getPhoneNumber().indexOf("-") == -1)
+				if(ct.getPhoneNumber().indexOf("-") != -1)
 				{
 					InputMismatchException e = new InputMismatchException();
 					throw e;
