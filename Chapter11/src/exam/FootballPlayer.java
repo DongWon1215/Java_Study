@@ -3,10 +3,10 @@ package exam;
 public class FootballPlayer 
 {
 
-	int number;
-	int age;
-	String name; 
-	String team;
+	private int number;
+	private int age;
+	private String name; 
+	private String team;
 	
 	public FootballPlayer (int number, int age, String name, String team)
 	{
