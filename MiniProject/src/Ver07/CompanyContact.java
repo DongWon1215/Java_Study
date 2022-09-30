@@ -5,12 +5,7 @@ public class CompanyContact extends Contact
 	private String company;	
 	private String department;
 	private String rank;
-	
-	CompanyContact()
-	{
 		
-	}
-	
 	CompanyContact(String name, String phoneNumber, String eMail,String address,String birthDay,String group, String company,String department,String rank)
 	{
 		super(name, phoneNumber, eMail, address, birthDay, group);

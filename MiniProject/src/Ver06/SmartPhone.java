@@ -29,7 +29,7 @@ public class SmartPhone {
 		return false;
 	}
 	
-	private boolean referanceCheck(String phoneNum)
+	private boolean referenceCheck(String phoneNum)
 	{
 		for (int i = 0; i < personCount; i++) 
 		{
@@ -98,7 +98,7 @@ public class SmartPhone {
 					InputMismatchException e = new InputMismatchException();
 					throw e;
 				}
-				if(!referanceCheck(ct.getPhoneNumber()))
+				if(!referenceCheck(ct.getPhoneNumber()))
 				{
 					Exception e = new Exception();
 					throw e;

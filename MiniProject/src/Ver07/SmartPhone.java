@@ -21,7 +21,7 @@ public class SmartPhone {
 	
 	private boolean matchPerson(int index) 
 	{
-		user.ShowData();
+		user[index].ShowData();
 		System.out.println("선택한 사람의 정보가 맞습니까?");
 		System.out.println("Yes or No");
 		
@@ -31,7 +31,7 @@ public class SmartPhone {
 		return false;
 	}
 	
-	private boolean referanceCheck(String phoneNum)
+	private boolean referenceCheck(String phoneNum)
 	{
 		for (int i = 0; i < personCount; i++) 
 		{
@@ -100,7 +100,7 @@ public class SmartPhone {
 					InputMismatchException e = new InputMismatchException();
 					throw e;
 				}
-				if(!referanceCheck(ct.getPhoneNumber()))
+				if(!referenceCheck(ct.getPhoneNumber()))
 				{
 					Exception e = new Exception();
 					throw e;

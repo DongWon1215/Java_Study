@@ -28,7 +28,7 @@ public class SmartPhone {
 		return false;
 	}
 	
-	private boolean referanceCheck(String phoneNum)
+	private boolean referenceCheck(String phoneNum)
 	{
 		for (int i = 0; i < personCount; i++) 
 		{
@@ -89,7 +89,7 @@ public class SmartPhone {
 		
 		else
 		{
-			if(referanceCheck(ct.getPhoneNumber()))
+			if(referenceCheck(ct.getPhoneNumber()))
 			{
 				user[personCount] = ct;
 				personCount++;

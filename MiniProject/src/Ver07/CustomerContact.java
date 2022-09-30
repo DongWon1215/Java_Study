@@ -6,11 +6,6 @@ public class CustomerContact extends Contact
 	private String transactionItem;
 	private String rank;
 	
-	CustomerContact()
-	{
-		
-	}
-	
 	CustomerContact(String name, String phoneNumber, String eMail,String address,String birthDay,String group, String bussinessPartnerCompany,String transactionItem,String rank)
 	{
 		super(name, phoneNumber, eMail, address, birthDay, group);
