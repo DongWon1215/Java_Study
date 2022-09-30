@@ -32,11 +32,6 @@ public class FootballPlayer implements Comparable<FootballPlayer>
 		return team;
 	}
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "이름 : " + name + " 나이 : " + age +" 팀명 : " + team + " 등번호 : " + number;
-	}
 
 	@Override
 	public int hashCode() {
@@ -66,6 +61,11 @@ public class FootballPlayer implements Comparable<FootballPlayer>
 		// TODO Auto-generated method stub
 		return team.compareTo(o.getTeam()) + name.compareTo(o.getName()) + (number - o.getNumber());
 	}
-	
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "이름 : " + name + " 나이 : " + age +" 팀명 : " + team + " 등번호 : " + number;
+	}
 	
 }
