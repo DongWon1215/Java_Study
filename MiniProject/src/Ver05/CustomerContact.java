@@ -1,33 +1,33 @@
-package Ver04;
+package Ver05;
 
-public class CompanyContact extends Contact 
+public class CustomerContact extends Contact 
 {
-	private String company;	
-	private String department;
+	private String bussinessPartnerCompany;	
+	private String transactionItem;
 	private String rank;
 	
-	CompanyContact()
+	CustomerContact()
 	{
 		
 	}
 	
-	CompanyContact(String name, String phoneNumber, String eMail,String address,String birthDay,String group, String company,String department,String rank)
+	CustomerContact(String name, String phoneNumber, String eMail,String address,String birthDay,String group, String bussinessPartnerCompany,String transactionItem,String rank)
 	{
 		super(name, phoneNumber, eMail, address, birthDay, group);
-		this.company = company;
-		this.department =department;
+		this.bussinessPartnerCompany = bussinessPartnerCompany;
+		this.transactionItem =transactionItem;
 		this.rank = rank;
 	}
 	
 	
 	public String getCompany() 
 	{
-		return company;
+		return bussinessPartnerCompany;
 	}
 
 	public String getDepartment() 
 	{
-		return department;
+		return transactionItem;
 	}
 
 	public String getRank() 
@@ -37,12 +37,12 @@ public class CompanyContact extends Contact
 
 	public void setCompany(String company) 
 	{
-		this.company = company;
+		this.bussinessPartnerCompany = company;
 	}
 
 	public void setDepartment(String department) 
 	{
-		this.department = department;
+		this.transactionItem = department;
 	}
 
 	public void setRank(String rank) 
@@ -59,8 +59,8 @@ public class CompanyContact extends Contact
 		System.out.println("주소 : " + address);
 		System.out.println("생일 : " + birthDay);
 		System.out.println("그룹 : " + group);
-		System.out.println("회사 : " + company);
-		System.out.println("부서 명 : " + department);
+		System.out.println("회사 : " + bussinessPartnerCompany);
+		System.out.println("부서 명 : " + transactionItem);
 		System.out.println("직급 : " + rank);
 	}
 }

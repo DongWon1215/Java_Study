@@ -51,7 +51,7 @@ public class CustomerContact extends Contact
 	}
 
 	@Override
-	void ShowInfo()
+	public void ShowData()
 	{
 		System.out.println("이름 : " + name);
 		System.out.println("전화번호 : " + phoneNumber);

@@ -1,4 +1,4 @@
-package Ver04;
+package Ver05;
 import java.util.Scanner;
 
 public class SmartPhone {
@@ -28,6 +28,17 @@ public class SmartPhone {
 		return false;
 	}
 	
+	private boolean referanceCheck(String phoneNum)
+	{
+		for (int i = 0; i < personCount; i++) 
+		{
+			if(user[i].getPhoneNumber() == phoneNum)
+				return false;
+		}
+		
+		return true;
+	}
+	
 	private static SmartPhone addressBook = new SmartPhone();
 	
 	public static SmartPhone getInstance()
@@ -52,6 +63,9 @@ public class SmartPhone {
 					user[i].ShowData();
 					return true;
 				}
+				
+				else
+					System.out.println("중복된 번호는 저장할 수 없습니다");					
 			}
 		}
 		return false;
@@ -78,9 +92,12 @@ public class SmartPhone {
 		
 		else
 		{
-			user[personCount] = ct;
-			personCount++;
-			return true;
+			if(referanceCheck(ct.getPhoneNumber()))
+			{
+				user[personCount] = ct;
+				personCount++;
+				return true;
+			}
 		}
 		return false;
 	}
