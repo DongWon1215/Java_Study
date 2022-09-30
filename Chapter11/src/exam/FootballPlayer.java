@@ -59,7 +59,15 @@ public class FootballPlayer implements Comparable<FootballPlayer>
 	@Override
 	public int compareTo(FootballPlayer o) {
 		// TODO Auto-generated method stub
-		return team.compareTo(o.getTeam()) + name.compareTo(o.getName()) + (number - o.getNumber());
+		if(team.compareTo(o.getTeam()) == 0)
+		{
+			if(name.compareTo(o.getName()) == 0)
+				return  (number - o.getNumber());
+			
+			else 
+				return name.compareTo(o.getName());
+		}
+		return team.compareTo(o.getTeam());
 	}
 
 	@Override
