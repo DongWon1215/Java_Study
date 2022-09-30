@@ -1,6 +1,6 @@
 package Ver04;
 
-public class Contact implements ShowData
+public abstract class Contact implements ShowData
 {
 	protected String name;
 	protected String phoneNumber;
@@ -30,6 +30,7 @@ public class Contact implements ShowData
 	{
 		this.name = name;
 	}
+
 	public void setPhoneNumber(String phoneNumber)
 	{
 		this.phoneNumber = phoneNumber;
@@ -81,9 +82,9 @@ public class Contact implements ShowData
 	}
 	
 	//==================ETC function===============
-	
+
 	@Override
-	public void ShowData()
+	public void ShowData() 
 	{
 		System.out.println("이름 : " + name);
 		System.out.println("전화번호 : " + phoneNumber);
@@ -91,5 +92,6 @@ public class Contact implements ShowData
 		System.out.println("주소 : " + address);
 		System.out.println("생일 : " + birthDay);
 		System.out.println("그룹 : " + group);
+		
 	}
 }
