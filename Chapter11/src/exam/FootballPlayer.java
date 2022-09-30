@@ -1,6 +1,6 @@
 package exam;
 
-public class FootballPlayer 
+public class FootballPlayer implements Comparable<FootballPlayer>
 {
 
 	private int number;
@@ -59,6 +59,12 @@ public class FootballPlayer
 			return false;
 		
 		return true;
+	}
+
+	@Override
+	public int compareTo(FootballPlayer o) {
+		// TODO Auto-generated method stub
+		return team.compareTo(o.getTeam()) + name.compareTo(o.getName()) + (number - o.getNumber());
 	}
 	
 	
