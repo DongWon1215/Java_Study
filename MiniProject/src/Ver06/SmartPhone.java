@@ -1,4 +1,5 @@
-package Ver05;
+package Ver06;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SmartPhone {
@@ -62,7 +63,7 @@ public class SmartPhone {
 					System.out.println(" Index = " + (i + 1));
 					user[i].ShowData();
 					return true;
-				}			
+				}
 			}
 		}
 		return false;
@@ -89,15 +90,31 @@ public class SmartPhone {
 		
 		else
 		{
-			if(referanceCheck(ct.getPhoneNumber()))
+			try
 			{
-				user[personCount] = ct;
-				personCount++;
-				return true;
+
+				if(ct.getPhoneNumber().indexOf("-") == -1)
+				{
+					InputMismatchException e = new InputMismatchException();
+					throw e;
+				}
+				if(!referanceCheck(ct.getPhoneNumber()))
+				{
+					Exception e = new Exception();
+					throw e;
+				}
+					user[personCount] = ct;
+					personCount++;
+					return true;
 			}
-			
-			else
+			catch(InputMismatchException e)
+			{
+				System.out.println("잘못된 형식의 번호를 입력했습니다");	
+			}
+			catch(Exception e)
+			{
 				System.out.println("중복된 번호는 저장할 수 없습니다");		
+			}
 		}
 		return false;
 	}

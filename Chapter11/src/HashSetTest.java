@@ -4,27 +4,27 @@ import java.util.Iterator;
 public class HashSetTest 
 {
 
-	@Override
-	public int hashCode() {
-		//0~9
-		super.hashCode();
-		return phoneNumber.charAt(phoneNumber.length() - 1 );
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		//
-		
-		if(obj != null && obj instanceof smartPhone)
-		{
-			SmartPhone phone = (SmartPhone)obj;
-			phoneNumber.equals(phone.getPhoneNumber());
-			return true;
-			
-		}
-		
-		return false;
-	}
+//	@Override
+//	public int hashCode() {
+//		//0~9
+//		super.hashCode();
+//		return phoneNumber.charAt(phoneNumber.length() - 1 );
+//	}
+//
+//	@Override
+//	public boolean equals(Object obj) {
+//		//
+//		
+//		if(obj != null && obj instanceof smartPhone)
+//		{
+//			SmartPhone phone = (SmartPhone)obj;
+//			phoneNumber.equals(phone.getPhoneNumber());
+//			return true;
+//			
+//		}
+//		
+//		return false;
+//	}
 
 	public static void main(String[] args) 
 	{

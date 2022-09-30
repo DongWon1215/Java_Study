@@ -1,4 +1,4 @@
-package Ver03;
+package Ver06;
 
 public class CompanyContact extends Contact 
 {
@@ -51,9 +51,14 @@ public class CompanyContact extends Contact
 	}
 
 	@Override
-	void ShowInfo()
+	public void ShowData()
 	{
-		super.ShowInfo();
+		System.out.println("이름 : " + name);
+		System.out.println("전화번호 : " + phoneNumber);
+		System.out.println("이메일 : " + eMail) ;
+		System.out.println("주소 : " + address);
+		System.out.println("생일 : " + birthDay);
+		System.out.println("그룹 : " + group);
 		System.out.println("회사 : " + company);
 		System.out.println("부서 명 : " + department);
 		System.out.println("직급 : " + rank);

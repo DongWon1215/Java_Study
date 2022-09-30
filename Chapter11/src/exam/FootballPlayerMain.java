@@ -47,11 +47,12 @@ public class FootballPlayerMain {
 		HashMap<Integer, FootballPlayer> playerMap = new HashMap<Integer, FootballPlayer>();
 		FootballPlayer a = new FootballPlayer(1,1,"aaa","aaa");
 		playerMap.put(a.getNumber(), a);
-		FootballPlayer b = new FootballPlayer(2,2,"bbb","bbb");
-		playerMap.put(b.getNumber(), b);
+		//FootballPlayer b = new FootballPlayer(2,2,"bbb","bbb");
+		//playerMap.put(b.getNumber(), b);
 		FootballPlayer c = new FootballPlayer(1,1,"aaa","aaa");
 		playerMap.put(c.getNumber(), c);
 		System.out.println(playerMap.size());
+			//playerMap.get(2).toString();
 			playerMap.get(1).toString();
 	}
 
