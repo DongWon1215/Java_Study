@@ -34,9 +34,9 @@ public class SmartPhoneHashSet {
 	
 	private boolean referenceCheck(String phoneNum)
 	{
-		for (int i = 0; i < personCount; i++) 
+		for (Contact temp : user) 
 		{
-			if(user..getPhoneNumber() == phoneNum)
+			if(temp.getPhoneNumber() == phoneNum)
 				return false;
 		}
 		
@@ -59,12 +59,11 @@ public class SmartPhoneHashSet {
 		
 		else
 		{
-			for(int i = 0; i < personCount; i++)
+			for (Contact temp : user) 
 			{
-				if(user.get(i).getName().equalsIgnoreCase(name))
+				if(temp.getName().equalsIgnoreCase(name))
 				{
-					System.out.println(" Index = " + (i + 1));
-					user.get(i).ShowData();
+					temp.ShowData();
 					return true;
 				}
 			}
@@ -74,13 +73,12 @@ public class SmartPhoneHashSet {
 	
 	public boolean searchPeople()
 	{
-		for(int i = 0; i < personCount; i++)
+		for (Contact temp : user) 
 			{
-			System.out.println(" Index = " + (i + 1));
-				user.get(i).ShowData();
+				temp.ShowData();
 				System.out.println("====================================================================");
 				
-				if(i == personCount - 1)
+				if()
 				return true;
 			}
 		return false;
@@ -122,18 +120,16 @@ public class SmartPhoneHashSet {
 		return false;
 	}
 	
-	public boolean deletePerson(int index)
+	public boolean deletePerson(String name)
 	{
 		if(personCount == 0)
 			System.out.println("지울 수 있는 데이터가 없습니다");
 			
 		else
 		{
-			if(matchPerson(index) && isInNumRange(index))
+			if(matchPerson(name))
 			{
-				for(int i = index; i < personCount - 1; i++)
-				user.set(i,user.get(i + 1));
-				user.remove(personCount);
+				user.remove(name);
 				personCount--;
 				return true;
 			}
@@ -152,9 +148,9 @@ public class SmartPhoneHashSet {
 		
 		else  
 		{
-			if(matchPerson(index))
+			if(matchPerson(name))
 			{
-				user.get(index).setName(name);
+				user..setName(name);
 				user.get(index).setPhoneNumber(phoneNumber);
 				user.get(index).setEMail(eMail);
 				user.get(index).setAddress(address);
