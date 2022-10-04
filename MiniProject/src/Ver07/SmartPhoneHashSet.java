@@ -1,15 +1,16 @@
 package Ver07;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class SmartPhone {
+public class SmartPhoneHashSet {
 	
 	private int personCount;
 	private static final int MAX_PERSON_NUM = 10;
 	private Scanner sc = new Scanner(System.in);
-	private List<Contact> user = new ArrayList<Contact>();
+	private HashSet<Contact> user = new HashSet<Contact>();
 
 	private boolean isInNumRange(int index) 
 	{
@@ -19,9 +20,9 @@ public class SmartPhone {
 		return false;
 	}
 	
-	private boolean matchPerson(int index) 
+	private boolean matchPerson(String name) 
 	{
-		user.get(index).ShowData();
+		user..ShowData();
 		System.out.println("선택한 사람의 정보가 맞습니까?");
 		System.out.println("Yes or No");
 		
@@ -35,19 +36,19 @@ public class SmartPhone {
 	{
 		for (int i = 0; i < personCount; i++) 
 		{
-			if(user.get(i).getPhoneNumber() == phoneNum)
+			if(user..getPhoneNumber() == phoneNum)
 				return false;
 		}
 		
 		return true;
 	}
 	
-	private static SmartPhone addressBook = new SmartPhone();
+	private static SmartPhoneHashSet addressBook = new SmartPhoneHashSet();
 	
-	public static SmartPhone getInstance()
+	public static SmartPhoneHashSet getInstance()
 	{
 		if(addressBook == null)
-			addressBook = new SmartPhone();
+			addressBook = new SmartPhoneHashSet();
 			return addressBook;
 	}
 	

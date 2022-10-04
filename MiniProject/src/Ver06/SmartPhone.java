@@ -33,7 +33,7 @@ public class SmartPhone {
 	{
 		for (int i = 0; i < personCount; i++) 
 		{
-			if(user[i].getPhoneNumber() == phoneNum)
+			if(user[i].getPhoneNumber().equals(phoneNum))
 				return false;
 		}
 		
