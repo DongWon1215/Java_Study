@@ -6,14 +6,13 @@ import java.util.Scanner;
 
 public class SmartPhoneHashMap {
 	
-	private int personCount;
 	private static final int MAX_PERSON_NUM = 10;
 	private Scanner sc = new Scanner(System.in);
 	private HashMap<String,Contact> user = new HashMap<>();
 
 	private boolean isInNumRange(int index) 
 	{
-		if(index < personCount)
+		if(index < user.size())
 			return true;
 		
 		return false;
@@ -56,7 +55,7 @@ public class SmartPhoneHashMap {
 	
 	public boolean searchPerson(String name)
 	{
-		if(personCount == 0)
+		if(user.isEmpty())
 			System.out.println("검색 할 데이터가 없습니다");
 		
 		else
@@ -73,13 +72,13 @@ public class SmartPhoneHashMap {
 	
 	public boolean searchPeople()
 	{
-		for(int i = 0; i < personCount; i++)
+		for(int i = 0; i < user.size(); i++)
 			{
 			System.out.println(" Index = " + (i + 1));
 				System.out.println(user);
 				System.out.println("====================================================================");
 				
-				if(i == personCount - 1)
+				if(i == user.size() - 1)
 				return true;
 			}
 		return false;
@@ -87,7 +86,7 @@ public class SmartPhoneHashMap {
 	
 	public boolean addPerson(Contact ct)
 	{
-		if(personCount >= MAX_PERSON_NUM)
+		if(user.size() >= MAX_PERSON_NUM)
 			System.out.println("최대 인원 수에 도달하였습니다");
 		
 		else
@@ -106,7 +105,6 @@ public class SmartPhoneHashMap {
 					throw e;
 				}
 					user.put(ct.getName(),ct);
-					personCount++;
 					return true;
 			}
 			catch(InputMismatchException e)
@@ -123,7 +121,7 @@ public class SmartPhoneHashMap {
 	
 	public boolean deletePerson(String name)
 	{
-		if(personCount == 0)
+		if(user.isEmpty())
 			System.out.println("지울 수 있는 데이터가 없습니다");
 			
 		else
@@ -131,7 +129,6 @@ public class SmartPhoneHashMap {
 			if(matchPerson(name))
 			{
 				user.remove(name);
-				personCount--;
 				return true;
 			}
 			
@@ -144,7 +141,7 @@ public class SmartPhoneHashMap {
 	public boolean editPerson(int index, String name, String phoneNumber, String eMail, String address, String birth, String group)
 	{
 
-		if(personCount == 0)
+		if(user.isEmpty())
 			System.out.println("수정 할 수 있는 데이터가 없습니다");
 		
 		else  
@@ -166,6 +163,6 @@ public class SmartPhoneHashMap {
 	
 	public int getAddressRealLength()
 	{
-		return personCount;
+		return user.size();
 	}
 }
