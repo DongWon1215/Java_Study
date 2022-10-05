@@ -6,14 +6,13 @@ import java.util.Scanner;
 
 public class SmartPhone {
 	
-	private int personCount;
 	private static final int MAX_PERSON_NUM = 10;
 	private Scanner sc = new Scanner(System.in);
 	private List<Contact> user = new ArrayList<Contact>();
 
 	private boolean isInNumRange(int index) 
 	{
-		if(index < personCount)
+		if(index < user.size())
 			return true;
 		
 		return false;
@@ -33,7 +32,7 @@ public class SmartPhone {
 	
 	private boolean referenceCheck(String phoneNum)
 	{
-		for (int i = 0; i < personCount; i++) 
+		for (int i = 0; i < user.size(); i++) 
 		{
 			if(user.get(i).getPhoneNumber() == phoneNum)
 				return false;
@@ -53,12 +52,12 @@ public class SmartPhone {
 	
 	public boolean searchPerson(String name)
 	{
-		if(personCount == 0)
+		if(user.size() == 0)
 			System.out.println("검색 할 데이터가 없습니다");
 		
 		else
 		{
-			for(int i = 0; i < personCount; i++)
+			for(int i = 0; i < user.size(); i++)
 			{
 				if(user.get(i).getName().equalsIgnoreCase(name))
 				{
@@ -73,13 +72,13 @@ public class SmartPhone {
 	
 	public boolean searchPeople()
 	{
-		for(int i = 0; i < personCount; i++)
+		for(int i = 0; i < user.size(); i++)
 			{
 			System.out.println(" Index = " + (i + 1));
 				user.get(i).ShowData();
 				System.out.println("====================================================================");
 				
-				if(i == personCount - 1)
+				if(i == user.size() - 1)
 				return true;
 			}
 		return false;
@@ -87,7 +86,7 @@ public class SmartPhone {
 	
 	public boolean addPerson(Contact ct)
 	{
-		if(personCount >= MAX_PERSON_NUM)
+		if(user.size() >= MAX_PERSON_NUM)
 			System.out.println("최대 인원 수에 도달하였습니다");
 		
 		else
@@ -106,7 +105,6 @@ public class SmartPhone {
 					throw e;
 				}
 					user.add(ct);
-					personCount++;
 					return true;
 			}
 			catch(InputMismatchException e)
@@ -123,17 +121,14 @@ public class SmartPhone {
 	
 	public boolean deletePerson(int index)
 	{
-		if(personCount == 0)
+		if(user.size() == 0)
 			System.out.println("지울 수 있는 데이터가 없습니다");
 			
 		else
 		{
 			if(matchPerson(index) && isInNumRange(index))
 			{
-				for(int i = index; i < personCount - 1; i++)
-				user.set(i,user.get(i + 1));
-				user.remove(personCount);
-				personCount--;
+				user.remove(index);
 				return true;
 			}
 			
@@ -146,7 +141,7 @@ public class SmartPhone {
 	public boolean editPerson(int index, String name, String phoneNumber, String eMail, String address, String birth, String group)
 	{
 
-		if(personCount == 0)
+		if(user.size() == 0)
 			System.out.println("수정 할 수 있는 데이터가 없습니다");
 		
 		else  
@@ -168,6 +163,6 @@ public class SmartPhone {
 	
 	public int getAddressRealLength()
 	{
-		return personCount;
+		return user.size();
 	}
 }
