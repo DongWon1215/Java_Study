@@ -52,7 +52,7 @@ public class SmartPhone {
 	
 	public boolean searchPerson(String name)
 	{
-		if(user.size() == 0)
+		if(user.isEmpty())
 			System.out.println("검색 할 데이터가 없습니다");
 		
 		else
@@ -121,7 +121,7 @@ public class SmartPhone {
 	
 	public boolean deletePerson(int index)
 	{
-		if(user.size() == 0)
+		if(user.isEmpty())
 			System.out.println("지울 수 있는 데이터가 없습니다");
 			
 		else
@@ -141,7 +141,7 @@ public class SmartPhone {
 	public boolean editPerson(int index, String name, String phoneNumber, String eMail, String address, String birth, String group)
 	{
 
-		if(user.size() == 0)
+		if(user.isEmpty())
 			System.out.println("수정 할 수 있는 데이터가 없습니다");
 		
 		else  
