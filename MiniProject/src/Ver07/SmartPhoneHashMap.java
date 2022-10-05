@@ -1,16 +1,15 @@
 package Ver07;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.InputMismatchException;
+import java.util.Iterator;
 import java.util.Scanner;
 
-public class SmartPhoneHashSet {
+public class SmartPhoneHashMap {
 	
 	private int personCount;
 	private static final int MAX_PERSON_NUM = 10;
 	private Scanner sc = new Scanner(System.in);
-	private HashSet<Contact> user = new HashSet<Contact>();
+	private HashMap<String,Contact> user = new HashMap<>();
 
 	private boolean isInNumRange(int index) 
 	{
@@ -22,7 +21,7 @@ public class SmartPhoneHashSet {
 	
 	private boolean matchPerson(String name) 
 	{
-		user.;
+		user.get(name).ShowData();
 		System.out.println("선택한 사람의 정보가 맞습니까?");
 		System.out.println("Yes or No");
 		
@@ -34,21 +33,24 @@ public class SmartPhoneHashSet {
 	
 	private boolean referenceCheck(String phoneNum)
 	{
-		for (Contact temp : user) 
+		Iterator<HashMap.Entry<String,Contact>> entry = user.entrySet().iterator();
+		while(entry.hasNext())
 		{
-			if(temp.getPhoneNumber() == phoneNum)
+			HashMap.Entry<String, Contact> element = entry.next();
+
+			if(element.getValue().getPhoneNumber() == phoneNum)
 				return false;
 		}
 		
 		return true;
 	}
 	
-	private static SmartPhoneHashSet addressBook = new SmartPhoneHashSet();
+	private static SmartPhoneHashMap addressBook = new SmartPhoneHashMap();
 	
-	public static SmartPhoneHashSet getInstance()
+	public static SmartPhoneHashMap getInstance()
 	{
 		if(addressBook == null)
-			addressBook = new SmartPhoneHashSet();
+			addressBook = new SmartPhoneHashMap();
 			return addressBook;
 	}
 	
@@ -59,13 +61,11 @@ public class SmartPhoneHashSet {
 		
 		else
 		{
-			for (Contact temp : user) 
+			
+			if(user.get(name) != null)
 			{
-				if(temp.getName().equalsIgnoreCase(name))
-				{
-					temp.ShowData();
-					return true;
-				}
+				user.get(name).ShowData();
+				return true;
 			}
 		}
 		return false;
@@ -73,12 +73,13 @@ public class SmartPhoneHashSet {
 	
 	public boolean searchPeople()
 	{
-		for (Contact temp : user) 
+		for(int i = 0; i < personCount; i++)
 			{
-				temp.ShowData();
+			System.out.println(" Index = " + (i + 1));
+				System.out.println(user);
 				System.out.println("====================================================================");
 				
-				if()
+				if(i == personCount - 1)
 				return true;
 			}
 		return false;
@@ -104,7 +105,7 @@ public class SmartPhoneHashSet {
 					Exception e = new Exception();
 					throw e;
 				}
-					user.add(ct);
+					user.put(ct.getName(),ct);
 					personCount++;
 					return true;
 			}
@@ -150,12 +151,12 @@ public class SmartPhoneHashSet {
 		{
 			if(matchPerson(name))
 			{
-				user..setName(name);
-				user.get(index).setPhoneNumber(phoneNumber);
-				user.get(index).setEMail(eMail);
-				user.get(index).setAddress(address);
-				user.get(index).setBirth(birth);
-				user.get(index).setGroup(group);
+				user.get(name).setName(name);
+				user.get(name).setPhoneNumber(phoneNumber);
+				user.get(name).setEMail(eMail);
+				user.get(name).setAddress(address);
+				user.get(name).setBirth(birth);
+				user.get(name).setGroup(group);
 				
 				return true;
 			}

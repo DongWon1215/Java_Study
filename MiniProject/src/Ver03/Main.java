@@ -6,7 +6,11 @@ public class Main
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
+		phoneBook();
 		
+	}
+	public static void phoneBook()
+	{
 		Scanner sc = new Scanner(System.in);
 
 		SmartPhone phone = SmartPhone.getInstance();
