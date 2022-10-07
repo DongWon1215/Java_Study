@@ -25,6 +25,8 @@ public class ThreadMain {
 			e.printStackTrace();
 		} // 스레드가 종료될 때 까지 다른 스레드를 block
 		
+		SumThread st = new SumThread();
+		
 		
 	}
 

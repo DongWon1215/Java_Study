@@ -7,7 +7,7 @@ public class MyThread2 implements Runnable
 	{
 		for (int i = 0; i < 100; i++) 
 		{
-		System.out.println("runnable 메소드 실행");
+			System.out.println("runnable 메소드 실행");
 		}
 	}
 	
