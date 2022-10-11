@@ -30,7 +30,10 @@ public class MessageClient {
 				dout.flush();
 				
 				if(str1.equals("exit"))
+				{
+					System.out.println("");
 					break;
+				}
 				
 				str2 = din.readUTF();
 				System.out.println("Server : " + str2);
