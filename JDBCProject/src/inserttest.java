@@ -25,7 +25,7 @@ public class inserttest {
 				
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 				
-				pstmt.setInt(1, 60);		//setInt( ? 순서, 값)
+				pstmt.setInt(1, 50);		//setInt( ? 순서, 값)
 				pstmt.setString(2, "programming");		//setString( ? 순서, 값)
 				pstmt.setString(3, "LA");		//setString( ? 순서, 값)
 				

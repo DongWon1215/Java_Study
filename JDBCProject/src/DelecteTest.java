@@ -26,12 +26,12 @@ public class DelecteTest {
 				//사용해야 될 변수가 많은 경우 
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 				
-				pstmt.setInt(1, 50);		//setInt( ? 순서, 값)
+				pstmt.setInt(1, 30);		//setInt( ? 순서, 값)
 				
 				//4. ResultSet 객체 생성
 				//select의 결과를 담고있는 객체
 				int result = pstmt.executeUpdate();
-				System.out.println("여기까지 오냐?");
+				System.out.println("여기까지 오냐?"+ result);
 				
 				if(result > 0 )
 					System.out.println("Delete Complete");
