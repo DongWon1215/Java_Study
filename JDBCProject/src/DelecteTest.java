@@ -31,7 +31,6 @@ public class DelecteTest {
 				//4. ResultSet 객체 생성
 				//select의 결과를 담고있는 객체
 				int result = pstmt.executeUpdate();
-				System.out.println("여기까지 오냐?"+ result);
 				
 				if(result > 0 )
 					System.out.println("Delete Complete");
