@@ -6,7 +6,7 @@ import java.util.Scanner;
 import dept.domain.Dept;
 import dept.service.ResearchService;
 
-public class ResearchController 
+public class ResearchController  implements Controller
 {
 	ResearchService service = new ResearchService();
 	

@@ -16,7 +16,12 @@ public class SelectService
 	// 필요한 DataBase 작업은 Dao를 통해서 작업
 	
 
-	Dao dao = new OracleDao();
+	Dao dao = null;
+
+	public SelectService(Dao dao)
+	{
+		this.dao = dao;
+	}
 	
 	public List<Dept> select()
 	{
