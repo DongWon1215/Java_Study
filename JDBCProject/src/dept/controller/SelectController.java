@@ -12,8 +12,8 @@ public class SelectController  implements Controller
 	
 	public void process()
 	{
-		// »ç¿ëÀÚÀÇ ¿äÃ»À» Ã³¸®ÇÒ ¼­ºñ½º·Î Ã³¸® ¿äÃ»
-		// ºÎ¼­ ÀüÃ¼ ¸®½ºÆ®¸¦ Ãâ·Â
+		// ì‚¬ìš©ìì˜ ìš”ì²­ì„ ì²˜ë¦¬í•  ì„œë¹„ìŠ¤ë¡œ ì²˜ë¦¬ ìš”ì²­
+		// ë¶€ì„œ ì „ì²´ ë¦¬ìŠ¤íŠ¸ë¥¼ ì¶œë ¥
 		// List<Dept>
 		
 		List<Dept> list = service.select();
@@ -26,6 +26,6 @@ public class SelectController  implements Controller
 			}
 		}
 		else
-			System.out.println("°Ë»ö °á°ú ¾øÀ½");
+			System.out.println("ê²€ìƒ‰ ê²°ê³¼ ì—†ìŒ");
 	}
 }

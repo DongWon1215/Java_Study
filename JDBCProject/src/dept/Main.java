@@ -15,7 +15,7 @@ public class Main {
 		while(true)
 		{
 			menu();
-			System.out.println("¸Þ´º¸¦ ÀÔ·ÂÇÏ½Ã¿À");
+			System.out.println("ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½");
 			int select = Integer.parseInt(sc.nextLine());
 			
 			//list.get(select).process();
@@ -26,14 +26,14 @@ public class Main {
 	
 	public static void menu()
 	{
-		System.out.println("ºÎ¼­ °ü¸® ÇÁ·Î±×·¥");
+		System.out.println("ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½");
 		
-		System.out.println("1. ÀüÃ¼ ºÎ¼­ ¸®½ºÆ®");
-		System.out.println("2. ºÎ¼­ °Ë»ö");
-		System.out.println("3. ºÎ¼­ Á¤º¸ ÀúÀå");
-		System.out.println("4. ºÎ¼­ Á¤º¸ ¼öÁ¤");
-		System.out.println("5. ºÎ¼­ Á¤º¸ »èÁ¦");
-		System.out.println("6. ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("1. ï¿½ï¿½Ã¼ ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®");
+		System.out.println("2. ï¿½Î¼ï¿½ ï¿½Ë»ï¿½");
+		System.out.println("3. ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("4. ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("5. ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("6. ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½");
 	}
 	
 }
